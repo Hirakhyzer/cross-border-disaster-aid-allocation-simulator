@@ -1,0 +1,6 @@
+seed: 42
+regions: 24
+warehouses: 4
+policy: fairness_aware
+minimum_service_target: 0.28
+research_boundary: synthetic humanitarian allocation experiment only
