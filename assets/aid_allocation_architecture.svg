@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="420" viewBox="0 0 1100 420" role="img" aria-label="Cross-border disaster aid allocation architecture">
+  <rect width="1100" height="420" fill="#f8fafc"/>
+  <text x="550" y="38" font-size="24" text-anchor="middle" font-family="Arial" fill="#0f172a">Cross-Border Disaster Aid Allocation Simulator</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+  </defs>
+  <g font-family="Arial" font-size="14" fill="#0f172a">
+    <rect x="40" y="100" width="170" height="70" rx="12" fill="#dbeafe" stroke="#2563eb"/><text x="125" y="132" text-anchor="middle">Affected regions</text><text x="125" y="152" text-anchor="middle">needs + vulnerability</text>
+    <rect x="40" y="250" width="170" height="70" rx="12" fill="#dcfce7" stroke="#16a34a"/><text x="125" y="282" text-anchor="middle">Warehouses</text><text x="125" y="302" text-anchor="middle">aid stock + capacity</text>
+    <rect x="280" y="175" width="170" height="70" rx="12" fill="#fef3c7" stroke="#d97706"/><text x="365" y="207" text-anchor="middle">Routes + borders</text><text x="365" y="227" text-anchor="middle">delay + risk</text>
+    <rect x="520" y="175" width="190" height="70" rx="12" fill="#ede9fe" stroke="#7c3aed"/><text x="615" y="207" text-anchor="middle">Fairness-aware</text><text x="615" y="227" text-anchor="middle">allocation engine</text>
+    <rect x="780" y="100" width="170" height="70" rx="12" fill="#fee2e2" stroke="#dc2626"/><text x="865" y="132" text-anchor="middle">Coverage + unmet</text><text x="865" y="152" text-anchor="middle">need analysis</text>
+    <rect x="780" y="250" width="170" height="70" rx="12" fill="#e0f2fe" stroke="#0284c7"/><text x="865" y="282" text-anchor="middle">Fairness audit</text><text x="865" y="302" text-anchor="middle">transparency ledger</text>
+    <line x1="210" y1="135" x2="520" y2="190" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="210" y1="285" x2="520" y2="230" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="450" y1="210" x2="520" y2="210" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="710" y1="205" x2="780" y2="140" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="710" y1="220" x2="780" y2="285" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  </g>
+</svg>
