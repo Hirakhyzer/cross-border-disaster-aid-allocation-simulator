@@ -103,11 +103,13 @@ def allocate_aid(
             if needed_to_target <= 0:
                 needed_to_target = need_left
             batch = max(1.0, min(stock_left, needed_to_target, max(4.0, row.requested_units * 0.33)))
-            if batch <= 0:
+            batch_units = int(max(1, np.floor(batch)))
+            batch_units = int(min(batch_units, np.floor(stock_left), np.floor(need_left)))
+            if batch_units <= 0:
                 continue
-            remaining_stock[key_stock] = stock_left - batch
-            remaining_need[key_need] = need_left - batch
-            country_delivered[row.country] += batch
+            remaining_stock[key_stock] = stock_left - batch_units
+            remaining_need[key_need] = need_left - batch_units
+            country_delivered[row.country] += batch_units
             allocation_rows.append({
                 "policy": policy,
                 "allocation_round": round_idx + 1,
@@ -115,9 +117,9 @@ def allocate_aid(
                 "country": row.country,
                 "aid_type": row.aid_type,
                 "warehouse_id": row.warehouse_id,
-                "allocated_units": int(round(batch)),
+                "allocated_units": batch_units,
                 "requested_units": int(round(row.requested_units)),
-                "coverage_after_allocation": round(_coverage_after(allocation_rows, row.region_id, row.aid_type, batch, row.requested_units), 4),
+                "coverage_after_allocation": round(_coverage_after(allocation_rows, row.region_id, row.aid_type, batch_units, row.requested_units), 4),
                 "estimated_travel_hours": round(row.estimated_travel_hours, 2),
                 "route_risk": round(row.route_risk, 3),
                 "cross_border": int(row.cross_border),
